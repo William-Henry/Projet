@@ -13,7 +13,6 @@ public class MainActivity extends Activity {
     private RecyclerView recyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
-
     private MainController controller;
 
     @Override
@@ -21,10 +20,8 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         recyclerView = findViewById(R.id.my_recycler_view);
-
         controller = new MainController(this);
         controller.onStart();
-
     }
 
     public void showList(final List<F1> input){
@@ -55,7 +52,4 @@ public class MainActivity extends Activity {
         }));
     }
 
-    //private static final String LOG_TAG = MainActivity.class.getSimpleName();
-
-    //public void
 }
