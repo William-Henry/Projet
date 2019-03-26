@@ -8,5 +8,5 @@
   
 - Présentation de l'application :
   Cette application mobile affiche la liste des Grands Prix du championnat de Formule 1 de cette année(2019).
-  https://github.com/William-Henry/Projet/blob/master/Screenshot_1553638361.png
+  ![Alt text](https://github.com/William-Henry/Projet/blob/master/Screenshot_1553638361.png)
   
