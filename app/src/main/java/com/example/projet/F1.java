@@ -1,22 +1,31 @@
 package com.example.projet;
 
 public class F1 {
-    private String name;
-    private String url;
+    private String raceName;
+    private int round;
+    //private String url;
 
-    public String getName() {
-        return name;
+    public String getRaceName() {
+        return raceName;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.raceName = name;
     }
 
-    public String getUrl() {
-        return url;
+    public int getRound() {
+        return round;
     }
 
-    public void setUrl(String url) {
-        this.url = url;
+    public void setRound(int round) {
+        this.round = round;
     }
+
+    //public String getUrl() {
+    //    return url;
+    //}
+
+    //public void setUrl(String url) {
+     //   this.url = url;
+    //}
 }

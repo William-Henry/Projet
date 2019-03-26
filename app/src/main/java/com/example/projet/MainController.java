@@ -22,14 +22,12 @@ public class MainController {
     }
 
     public void onStart(){
-        final String BASE_URL = "https://pokeapi.co/api/v2/";
-
         Gson gson = new GsonBuilder()
                 .setLenient()
                 .create();
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(BASE_URL)
+                .baseUrl("https://raw.githubusercontent.com/William-Henry/APIF1/master/")
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();
 

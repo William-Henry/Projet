@@ -5,6 +5,6 @@ import retrofit2.http.GET;
 
 public interface RestF1Api {
 
-    @GET("pokemon")
+    @GET("Races.json")
     Call<RestF1Response> getListF1();
 }

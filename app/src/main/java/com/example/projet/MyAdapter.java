@@ -12,17 +12,12 @@ import java.util.List;
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.CelluleJava> {
     private List<F1> listValues;
 
-    // Provide a reference to the views for each data item
-    // Complex data items may need more than one view per item, and
-    // you provide access to all the views for a data item in a view holder
     public class CelluleJava extends RecyclerView.ViewHolder {
-        // each data item is just a string in this case
         public TextView txtHeader;
         public TextView txtFooter;
         public ImageView image;
         public View layout;
 
-        //Constructeur
         public CelluleJava(View v) {
             super(v);
             layout = v;
@@ -42,30 +37,23 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.CelluleJava> {
         notifyItemRemoved(position);
     }
 
-    // Provide a suitable constructor (depends on the kind of dataset)
     public MyAdapter(List<F1> listValues) {
         this.listValues = listValues;
     }
 
-    // Create new views (invoked by the layout manager)
     @Override
-    public CelluleJava onCreateViewHolder(ViewGroup parent,
-                                          int viewType) {
-        // create a new view
+    public CelluleJava onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
         View v = inflater.inflate(R.layout.row_layout, parent, false);
-        // set the view's size, margins, paddings and layout parameters
         CelluleJava vh = new CelluleJava(v);
         return vh;
     }
 
-    // Replace the contents of a view (invoked by the layout manager)
     @Override
     public void onBindViewHolder(CelluleJava holder, final int position) {
-        // - get element from your dataset at this position
-        // - replace the contents of the view with that element
+
         F1 currentF1 = listValues.get(position);
-        final String name = currentF1.getName();
+        final String name = currentF1.getRaceName();
         holder.txtHeader.setText(name);
         holder.txtHeader.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,7 +65,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.CelluleJava> {
         holder.txtFooter.setText("Footer: " + name);
     }
 
-    // Return the size of your dataset (invoked by the layout manager)
     @Override
     public int getItemCount() {
         return listValues.size();
